@@ -12,9 +12,15 @@ function directory() {
   echo "📁${directory_color}/%1/${color_reset}"
 }
 
+function arrow() {
+  local arrow_color="%{$fg_no_bold[white]%}"
+  local color_reset="%{$reset_color%}"
+  echo "${arrow_color}❯${color_reset}"
+}
+
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}[%{$fg_no_bold[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}] 🔥"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}] 💙"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}] ✔️"
 
-PROMPT='$(username) $(directory) $(git_prompt_info) > '
+PROMPT='$(username) $(directory) $(git_prompt_info) $(arrow) '
