@@ -12,4 +12,9 @@ function directory() {
   echo "📁${directory_color}/%1/${color_reset}"
 }
 
-PROMPT='$(username) $(directory) rama gitstatus > '
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}[%{$fg_no_bold[yellow]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}] 🔥"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}] 💙"
+
+PROMPT='$(username) $(directory) $(git_prompt_info) > '
