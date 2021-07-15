@@ -1,5 +1,5 @@
 # rs-zsh-theme
 
-![Terminal screenshot](./screenshot 'Terminal screenshot')
+![Terminal screenshot](./screenshot.png 'Terminal screenshot')
 
 theme created for my personal oh-my-zsh terminal
